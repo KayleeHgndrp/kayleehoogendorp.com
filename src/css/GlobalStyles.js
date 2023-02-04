@@ -1,73 +1,76 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
-    // General reset -------------------------------------
-
-    html, body, div, span, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strong, sub, sup, var,
-    b, u, i, 
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-    	margin: 0;
-    	padding: 0;
-    	border: 0;
-    	font-size: 100%;
-    	font: inherit;
-    	vertical-align: baseline;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
     }
-    
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
-    	display: block;
+
+    html{
+        scroll-behavior: smooth;
+        -ms-text-size-adjust:100%;
+        -webkit-text-size-adjust:100%
     }
-    
+
     body {
-    
+        font-family: "Neue Montreal Book";
         overflow-x: hidden;
         box-sizing: border-box;
-        line-height: 1.2;
-        letter-spacing: .02em;
-    
-        
-    }
-    
-    ol, ul {
-    	list-style: none;
-    }
-    
-    blockquote, q {
-    	quotes: none;
-    }
-    
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-    	content: '';
-    	content: none;
-    }
-    
-    table {
-    	border-collapse: collapse;
-    	border-spacing: 0;
     }
 
-    
-    
+    h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th {
+        text-rendering: geometricPrecision;
+        color: var(--black)
+    }
+
+    h1, h2 {
+        font-family: "Porlane", sans-serif;
+     
+    }
+
+    h3, h4, h5, h6{
+        font-family: "Neue Montreal Medium";
+    }
+    p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th{
+        font-family: "Neue Montreal Book";
+    }
+
+    h1{
+        font-size: clamp(12px, 35vw, 25rem); 
+        text-transform: uppercase;
+    }
+
+    h2{
+        font-size: clamp(2.125rem, 4vw, 4rem);
+        text-transform: uppercase;
+    }
+    h3{
+        font-size: clamp(0.8rem, 1vw, 1.125rem);
+        text-transform: uppercase;
+    }
+
+    h4{
+        font-size: calc(0.8rem + 0.5vw);
+        font-weight: 800;
+    }
+
+    p{
+      font-size: clamp(1rem, 2vw, 1.375rem); 
+    }
+
+    a{
+      cursor: pointer;
+    }
+
     :root{
         // Colors
         --black: #222222;
         --accent: #37508b;
         --accent-rgb: 55, 80, 139;
-        /*--accent: #f7504f;*/
         --grey: #B3BAC1;
         --blue: #b3b9cb;
         --purple: #cfd2f5;
