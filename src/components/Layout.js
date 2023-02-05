@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 import React from 'react'
 import styled from "styled-components"
+import AboutSection from '../sections/AboutSection'
 import HeroSection from '../sections/HeroSection'
 
 /* -------------------------- Internal Dependencies ------------------------- */
@@ -18,6 +19,7 @@ const Layout = () => {
     <LayOutContainer>
         <Navigation/>
         <HeroSection />
+        <AboutSection/>
     </LayOutContainer>
   )
 }
