@@ -167,7 +167,13 @@ const HeroSection = () => {
                         with an unique layout, interactions and great typography. 
                     </p>
                 </div>
-                <ButtonContainer><ButtonLink  col={"white"} bg={"black"} name={"Send me an email"} href="mailto:kphoogendorp@gmail.com?subject=Let's work together!"></ButtonLink></ButtonContainer>
+                <ButtonContainer>
+                  <ButtonLink  
+                    col={"white"} bg={"black"} 
+                    name={"Send me an email"} 
+                    href="mailto:kphoogendorp@gmail.com?subject=Let's work together!"
+                    />
+                  </ButtonContainer>
               </IntroContainer>
               <ProfilePicture  profilePic={ProfilePic} alt="A photo of the person this website belongs to. In the picture. In the photo, a person with a blue-orange scarf stands in front of a blue door. The person looks into the camera."></ProfilePicture>
             </GridContainerIntro>
