@@ -61,7 +61,9 @@ const Info = styled.div`
     justify-content: space-between;
 
     @media (max-width: 64em){
-        margin-bottom: 2rem;
+        .desc{
+            margin-bottom: 2rem;
+        }
     }
   
 `
@@ -93,7 +95,7 @@ const Card = (props) => {
                 <div>
                     <Icon><img src={icon}></img></Icon>
                     <Title>{name}</Title>
-                    <p>{description}</p>
+                    <p class="desc">{description}</p>
                 </div>
                 <HashTags>            
                     {
