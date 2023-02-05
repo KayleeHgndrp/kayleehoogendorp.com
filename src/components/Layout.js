@@ -3,11 +3,11 @@
 /* -------------------------------------------------------------------------- */
 import React from 'react'
 import styled from "styled-components"
-import AboutSection from '../sections/AboutSection'
-import HeroSection from '../sections/HeroSection'
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navigation from './Navigation'
+import {HeroSection, AboutSection} from '../sections'
+
 
 const LayOutContainer = styled.div`
     width: 100vw;
