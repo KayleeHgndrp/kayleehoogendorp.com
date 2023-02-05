@@ -3,7 +3,14 @@
 /* -------------------------------------------------------------------------- */
 import { createGlobalStyle } from "styled-components";
 
+/* -------------------------- Internal Font Dependencies ------------------------- */
+import NeueHelveticBold from "../assets/fonts/NeueHelveticaBQBold-700.otf";
+import nueMontrealMedium from "../assets/fonts/PPNeueMontreal-Medium.otf";
+import nueMontrealBook from "../assets/fonts/PPNeueMontreal-Book.otf";
+import Porlane from "../assets/fonts/Porlane.otf";
+
 export const GlobalStyle = createGlobalStyle`
+
     * {
       margin: 0;
       padding: 0;
@@ -22,12 +29,31 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    @font-face {
+    font-family: 'Neue Helvetica BQ Bold';
+    src: url(${NeueHelveticBold}) format("opentype") ;
+    }
+    
+    @font-face {
+        font-family: 'Neue Montreal Medium';
+        src: url(${nueMontrealMedium}) format("opentype") ;
+    }
+    
+    @font-face {
+        font-family: 'Neue Montreal Book';
+        src: url(${nueMontrealBook}) format("opentype") ;
+    }
+    @font-face {
+        font-family: 'Porlane';
+        src: url(${Porlane}) format("opentype") ;
+    }
+
     h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th {
         text-rendering: geometricPrecision;
         color: var(--black)
     }
 
-    h1, h2 {
+    h1, h2,  {
         font-family: "Porlane", sans-serif;
      
     }
@@ -40,7 +66,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1{
-        font-size: clamp(12px, 35vw, 25rem); 
+        font-size: clamp(, 35vw, 25rem); 
         text-transform: uppercase;
     }
 
@@ -49,13 +75,15 @@ export const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
     }
     h3{
-        font-size: clamp(0.8rem, 1vw, 1.125rem);
+        font-size: calc(0.8rem + 0.5vw);
+        font-weight: 800;
         text-transform: uppercase;
     }
 
     h4{
-        font-size: calc(0.8rem + 0.5vw);
         font-weight: 800;
+        font-size: clamp(0.8rem, 1vw, 1.125rem);
+        text-transform: capitalize;
     }
 
     p{
