@@ -46,8 +46,8 @@ const ExperienceContainer = styled.div`
   text-align: center;
 
   .heading{
-    font-family: 'Neue Montreal Medium';
     font-size: clamp( 1.8375rem, 3.5vw, 3rem);
+    font-weight: 400;
   }
 
   .sub-heading{
