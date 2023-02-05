@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 /* -------------------------- Internal Dependencies ------------------------- */
-import Line from '../components/Line.js'
+import {Line, ButtonLink} from '../components'
 
 /* -------------------------- Internal Image Dependencies ------------------------- */
 import ProfilePic from '../assets/img/me.jpg'
@@ -104,6 +104,10 @@ const IntroContainer= styled.div`
     }
 `
 
+const ButtonContainer = styled.div`
+  width: 16em;
+`
+
 const ProfilePicture = styled.div`
     border-radius: var(--border-rad);
     min-height: 70vh;
@@ -163,6 +167,7 @@ const HeroSection = () => {
                         with an unique layout, interactions and great typography. 
                     </p>
                 </div>
+                <ButtonContainer><ButtonLink  col={"white"} bg={"black"} name={"Send me an email"} href="mailto:kphoogendorp@gmail.com?subject=Let's work together!"></ButtonLink></ButtonContainer>
               </IntroContainer>
               <ProfilePicture  profilePic={ProfilePic} alt="A photo of the person this website belongs to. In the picture. In the photo, a person with a blue-orange scarf stands in front of a blue door. The person looks into the camera."></ProfilePicture>
             </GridContainerIntro>
