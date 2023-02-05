@@ -152,7 +152,7 @@ const HeroSection = () => {
             <Title id="top-title"><h1 id="text-left">Front</h1><h1 id="dash"></h1><h1 id="text-right">End</h1></Title>
               <FlexContainer>
                 <Title id="bottom-title"><h1>Developer</h1></Title>
-                <FlowerContainer className='flower-container'><img className='flower' src={flower} alt="Orange flower next to the title that spins when you hover or open/refresh the website"/></FlowerContainer>
+                <FlowerContainer id='flower-container'><img src={flower} alt="Orange flower next to the title that spins when you hover or open/refresh the website"/></FlowerContainer>
               </FlexContainer>
             <Line />
           </div>
