@@ -6,7 +6,7 @@ import styled from "styled-components"
 import gsap from 'gsap';
 
 /* -------------------------- Internal Dependencies ------------------------- */
-
+import ButtonLink from './ButtonLink';
 import {
   staggerText,
   RevealContainer, 
@@ -53,7 +53,7 @@ export const Nav = styled.div`
   display: none;
   justify-content: center;
   align-items: center;
-  background: var(--blue);
+  background: ${props => props.workrefVisible | props.footerrefVisible ? props.theme.accent : props.theme.body};
   color: #fff;
 `
 const HamburgerMenu =  styled.span`
@@ -90,7 +90,6 @@ const HamburgerText = styled.h4`
     bottom: 1.2rem;
     transform: ${props => props.isOpen ? 'translateX(0%)' :  'translateX(150%)'};
     transition: transform 0.5s ease;
- 
 `
 
 export const NavItems = styled.div`
@@ -116,6 +115,11 @@ export const NavItems = styled.div`
       margin-top: 4rem;
     }
   }
+`
+const ButtonContainer = styled.div`
+  width: 90%;
+  position: absolute;
+  bottom: 3rem;
 `
 const Title = styled.div`
     display: flex;
@@ -243,7 +247,7 @@ useEffect( () => {
                 <HamburgerText isOpen={menuState.clicked} >close</HamburgerText>
             </HamburgerMenu>
         </Header>
-        <Nav className='navigation' isOpen={menuState.clicked}>
+        <Nav className='navigation' isOpen={menuState.clicked} workrefVisible={props.workrefVisible} footerrefVisible={props.footerrefVisible}>
             <NavItems className='nav-items'>
                 <ul>
                   {navData.map(link => (
@@ -257,6 +261,13 @@ useEffect( () => {
                       </a>
                     </li>
                   ))}
+                  <ButtonContainer>
+                    <ButtonLink  
+                      col={"white"} bg={"black"} 
+                      name={"Contact"} 
+                      href="mailto:kphoogendorp@gmail.com?subject=Let's work together!"
+                    />
+                  </ButtonContainer>
                 </ul>
             </NavItems>
         </Nav>
