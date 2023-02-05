@@ -2,17 +2,20 @@
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
 import React from 'react'
-import styled from "styled-components"
+import styled , {ThemeProvider} from "styled-components"
 import { useInView } from 'react-intersection-observer'
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navigation from './Navigation'
 import {HeroSection, AboutSection, WorkSection} from '../sections'
+import { lightTheme, darkTheme } from "./Themes"
 
 
 const LayOutContainer = styled.div`
     width: 100vw;
-    background: #b3b9cb;
+    background: ${props => props.workrefVisible ? darkTheme.body: lightTheme.body};
+    color: ${props => props.workrefVisible ? darkTheme.text: lightTheme.text};
+    transition: background 2s ease, color 1s ease;
 `
 
 const Layout = () => {
@@ -21,12 +24,14 @@ const Layout = () => {
     });
 
   return (
-    <LayOutContainer>
-        <Navigation/>
-        <HeroSection />
-        <AboutSection/>
-        <WorkSection ref={workref}/>
-    </LayOutContainer>
+    <ThemeProvider theme={lightTheme}>
+        <LayOutContainer workrefVisible={workrefVisible}>
+            <Navigation/>
+            <HeroSection />
+            <AboutSection/>
+            <WorkSection ref={workref}/>
+        </LayOutContainer>
+    </ThemeProvider>
   )
 }
 
