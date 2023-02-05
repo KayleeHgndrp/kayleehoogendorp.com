@@ -84,6 +84,8 @@ const ButtonLink = (props) => {
         bg={props.bg}
         onMouseOver={()=>setIsHovering(true)} 
         onMouseOut={()=>setIsHovering(false)}
+        aria-label={props.name} 
+        title="Button"
         >
       <InnerContainer >
         <InnerTextButton>{props.name}</InnerTextButton>

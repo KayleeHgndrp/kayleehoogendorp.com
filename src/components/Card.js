@@ -104,8 +104,8 @@ const Card = (props) => {
                 </HashTags>
             </Info>
             <Cover>
-                { video && <video autoPlay="autoplay" loop="loop" muted defaultmuted="true" playsInline data-wf-ignore="true" data-object-fit="cover"><source src={video} type="video/mp4"/></video>}
-                <img src={image}></img>
+                { video && <video autoPlay="autoplay" loop="loop" muted defaultmuted="true" playsInline data-wf-ignore="true" data-object-fit="cover" alt="A laptop sitting on the ground. Different websites are shown in turn on the laptop"><source src={video} type="video/mp4"/></video>}
+                <img src={image} alt="A laptop sitting on the ground. A website is shown"></img>
             </Cover>
         </GridContainer>
     </MainContainer>
