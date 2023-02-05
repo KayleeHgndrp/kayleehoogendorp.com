@@ -13,7 +13,7 @@ const Section =  styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
-  `
+`
 
 const Main = styled.div`
    width: 90%;
