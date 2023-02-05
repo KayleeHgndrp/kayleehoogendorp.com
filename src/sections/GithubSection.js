@@ -74,11 +74,14 @@ const GithubContainer = styled.div`
     justify-content: flex-end;
     align-items: center;
     gap: 0.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     color: white;
+  }
+
+  h4{
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    text-transform: uppercase;
   }
 `
 
@@ -171,7 +174,7 @@ const GithubSection = () => {
         <GithubContainer id="github-container">
           <a id="github-link"  href="https://github.com/KayleeHgndrp" target="_blank" aria-label="Go to my github" title="Github"> 
             <Github fill={"white"} height={25} width={25}/>
-            <h3>Check out my github</h3>            
+            <h4>Check out my github</h4>            
           </a>
         </GithubContainer>
       </Section>
