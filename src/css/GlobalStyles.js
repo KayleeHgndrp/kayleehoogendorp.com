@@ -30,8 +30,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-    font-family: 'Neue Helvetica BQ Bold';
-    src: url(${NeueHelveticBold}) format("opentype") ;
+        font-family: 'Neue Helvetica BQ Bold';
+        src: url(${NeueHelveticBold}) format("opentype") ;
     }
     
     @font-face {
@@ -53,9 +53,8 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--black)
     }
 
-    h1, h2,  {
-        font-family: "Porlane", sans-serif;
-     
+    h1, h2 {
+        font-family: "Porlane";
     }
 
     h3, h4, h5, h6{
@@ -66,8 +65,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1{
-        font-size: clamp(, 35vw, 25rem); 
+        font-size: clamp(12px, 35vw, 25rem);
+        font-weight: 500;
         text-transform: uppercase;
+        line-height: .84;
+        margin-bottom: -0.015em;
     }
 
     h2{
