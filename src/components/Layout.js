@@ -51,7 +51,7 @@ const Layout = () => {
             <AboutSection/>
             <WorkSection ref={workref}/>
             <GithubSection />
-            <FooterSection />
+            <FooterSection ref={footerref}/>
         </LayOutContainer>
     </ThemeProvider>
   )

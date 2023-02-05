@@ -83,7 +83,7 @@ const LinkContainer = styled.div`
     right: 0;
 `
 
-const FooterSection = () =>  {
+const FooterSection = React.forwardRef((props, ref) =>  {
   const [click, setClick] = useState(false);
   const mailRef = useRef();
 
@@ -97,7 +97,7 @@ const FooterSection = () =>  {
   };
 
   return (
-    <Section>
+    <Section ref={ref}>
       <Main>
         <Center>
           <FooterText>
@@ -119,6 +119,6 @@ const FooterSection = () =>  {
       </Main>
     </Section>
   )
-}
+})
 
 export default FooterSection
