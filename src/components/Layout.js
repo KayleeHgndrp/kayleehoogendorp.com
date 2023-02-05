@@ -1,13 +1,14 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react'
+import React, {useEffect } from 'react'
 import styled , {ThemeProvider} from "styled-components"
 import { useInView } from 'react-intersection-observer'
+import gsap from 'gsap';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import Navigation from './Navigation'
-import {HeroSection, AboutSection, WorkSection} from '../sections'
+import {HeroSection, AboutSection, WorkSection, GithubSection, FooterSection} from '../sections'
 import { lightTheme, darkTheme } from "./Themes"
 
 
@@ -23,13 +24,34 @@ const Layout = () => {
         triggerOnce: false,
     });
 
+    const {ref: footerref, inView: footerrefVisible} = useInView({
+        triggerOnce: false,
+      });
+   
+      useEffect(() => {
+       const tl = gsap.timeline()
+       tl
+          .fromTo("#top-title", { opacity: 0},  { duration: 0.8, opacity:1, ease: "power3.inOut",} , 'key1')
+          .fromTo("#bottom-title", { opacity: 0},  { duration: 0.8, opacity:1, ease: "power3.inOut",} , 'key1')
+          .fromTo("#flower-container",{scale: 0},  {duration: 1,scale: 1,ease: "power3.inOut"}, 'key1')
+          .fromTo("#line", {  opacity: 0, xPercent:-110},  { duration: 2, opacity:1, xPercent: 0, ease: "power3.inOut",}, 'key1')
+          .fromTo("#intro", { opacity:0},  { duration: 1, opacity:1, delay: 0.5, ease: "power3.inOut",} , 'key1')
+          .to("#flower-container" , {duration: 2,rotation:360, delay: 1, ease: "power3.inOut"}, 'key1')
+   
+          return () => {
+           if(tl) tl.kill()
+         }
+     }, [])
+
   return (
     <ThemeProvider theme={lightTheme}>
         <LayOutContainer workrefVisible={workrefVisible}>
-            <Navigation/>
+            <Navigation workrefVisible={workrefVisible} footerrefVisible={footerrefVisible}/>
             <HeroSection />
             <AboutSection/>
             <WorkSection ref={workref}/>
+            <GithubSection />
+            <FooterSection />
         </LayOutContainer>
     </ThemeProvider>
   )
