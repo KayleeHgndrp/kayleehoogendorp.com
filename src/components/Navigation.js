@@ -22,6 +22,9 @@ import {
 import { navData } from '../data/NavData';
 
 const Wrapper = styled.div`
+  position: fixed;
+  z-index: 999;
+
   h3, h4{
     color: white;
     text-transform: uppercase;
@@ -39,15 +42,12 @@ const Header = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
-      z-index: 9999;
       opacity: ${props => props.headerIsVisible? "1" : "0"};
       transition: opacity 0.5s ease; 
+      z-index: 999;
 `
 
 export const Nav = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   display: none;
