@@ -1,5 +1,10 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React, { useState } from 'react'
 import styled from 'styled-components'
+
+/* -------------------------- Internal SVG Dependencies ------------------------- */
 import { ArrowLink } from './AllSvgs'
 
 const ButtonContainer = styled.a`  
