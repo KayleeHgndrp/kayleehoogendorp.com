@@ -51,7 +51,6 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th {
         text-rendering: geometricPrecision;
         letter-spacing: 0.02rem;
-        color: var(--black);
     }
 
     h1, h2 {
