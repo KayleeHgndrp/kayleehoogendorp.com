@@ -42,7 +42,6 @@ const GridContainer = styled.div`
 const ExperienceContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
   text-align: center;
 
   .heading{
@@ -66,7 +65,7 @@ const AboutSection = () => {
                 <h3 className='heading'><AnimatedText text={"4"}/></h3>
                 <h3 className='heading'><AnimatedText  text={"2"}/></h3>
                 <h3 className='heading'><AnimatedText text={"1"}/></h3>
-                <h4 className='sub-heading'><AnimatedText  text={"Years into Software Development"} /></h4>
+                <h4 className='sub-heading'><AnimatedText  text={"Years into Programming"} /></h4>
                 <h4 className='sub-heading'><AnimatedText text={"Years into Web Development"} /></h4>
                 <h4 className='sub-heading'><AnimatedText text={"Year into Design"} /></h4>
             </ExperienceContainer>
