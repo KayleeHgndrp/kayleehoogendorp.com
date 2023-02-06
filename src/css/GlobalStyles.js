@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h4{
         font-weight: 800;
-        font-size: clamp(0.8rem, 1vw, 1.125rem);
+        font-size: clamp(0.75rem, 1vw, 1.125rem)
         text-transform: capitalize;
     }
 
