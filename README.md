@@ -1,7 +1,9 @@
-# kayleehoogendorp.com
+<h1 align="center">kayleehoogendorp.com</h1>
 
-<img width="1244" alt="Screenshot 2023-02-06 at 14 00 47" src="https://user-images.githubusercontent.com/16650847/216978285-d9b9ee73-13b7-45f7-b681-11d56481493e.png">
+<p align="center">The second iteration of my personal website <a href="www.kayleehoogendorp.com" title"my personal website" aria-label="Go to my personal website" target="_blank">kayleehoogendorp.com</a> built with React and hosted with <a href="www.digitalocean.com" title"DigitalOcean" aria-label="Go to the website of Digital Ocean" target="_blank">DigitalOcean</a></p>
 
+
+![Screenshot 2023-02-04 at 13 35 41](https://user-images.githubusercontent.com/16650847/216978469-21727473-ecb3-4a2f-b096-1e4a1e39e21f.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
