@@ -45,6 +45,10 @@ const Header = styled.div`
       opacity: ${props => props.headerIsVisible? "1" : "0"};
       transition: opacity 0.5s ease; 
       z-index: 999;
+
+      .logo, .hamburger-text{
+        font-size: 0.95rem;
+      }
 `
 
 export const Nav = styled.div`
@@ -244,7 +248,7 @@ useEffect( () => {
         <Header headerIsVisible={headerIsVisible} >
             <h4 className='logo'>HOOGENDORP</h4>
             <HamburgerMenu onClick={handleMenu} isOpen={menuState.clicked}>
-                <HamburgerText isOpen={menuState.clicked} >close</HamburgerText>
+                <HamburgerText className='hamburger-text' isOpen={menuState.clicked} >close</HamburgerText>
             </HamburgerMenu>
         </Header>
         <Nav className='navigation' isOpen={menuState.clicked} workrefVisible={props.workrefVisible} footerrefVisible={props.footerrefVisible}>
