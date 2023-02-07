@@ -58,7 +58,7 @@ export const Nav = styled.div`
 `
 const HamburgerMenu =  styled.span`
     height: 3rem;
-    width: clamp(3rem, 4vw, 4rem);
+    width: clamp(3.5rem, 4vw, 4rem);
     position: relative;
     cursor: pointer;
     overflow: hidden;

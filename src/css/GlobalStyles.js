@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: clamp(2.125rem, 4vw, 4rem);
     }
     h3{
-        font-size: calc(0.8rem + 0.5vw);
+        font-size: calc(1.125rem + 0.5vw);
         font-weight: 800;
         text-transform: uppercase;
     }
