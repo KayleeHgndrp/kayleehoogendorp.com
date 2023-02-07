@@ -10,6 +10,7 @@ import gsap from 'gsap';
 import Navigation from './Navigation'
 import {HeroSection, AboutSection, WorkSection, GithubSection, FooterSection} from '../sections'
 import { lightTheme, darkTheme } from "./Themes"
+import { CustomCursor } from '.';
 
 
 const LayOutContainer = styled.div`
@@ -45,6 +46,7 @@ const Layout = () => {
 
   return (
     <ThemeProvider theme={lightTheme}>
+        <CustomCursor />
         <LayOutContainer workrefVisible={workrefVisible}>
             <Navigation workrefVisible={workrefVisible} footerrefVisible={footerrefVisible}/>
             <HeroSection />
