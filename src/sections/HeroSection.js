@@ -156,7 +156,7 @@ const HeroSection = () => {
               </FlexContainer>
             <Line />
           </div>
-            <GridContainerIntro id="intro">
+            <GridContainerIntro id="homepage-intro">
               <IntroContainer>
                 <div>
                     <p>Hi, I'm Kaylee Hoogendorp.</p>
