@@ -49,14 +49,13 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[type=password], input[type=value], b, label, td, select, textarea, th {
-        text-rendering: geometricPrecision;
-        letter-spacing: 0.02rem;
+        
     }
 
     h1, h2 {
         font-family: "Porlane";
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     h3, h4, h5, h6{
@@ -73,7 +72,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h2{
-        font-size: clamp(2.125rem, 4vw, 4rem);
+        font-size: clamp(3.125rem, 4vw, 4rem);
+        letter-spacing: 0.06rem;
     }
     h3{
         font-size: calc(1.125rem + 0.5vw);
