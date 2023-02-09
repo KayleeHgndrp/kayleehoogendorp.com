@@ -72,7 +72,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h2{
-        font-size: clamp(3.125rem, 4vw, 4rem);
+        font-size: clamp(2.125rem, 4vw, 4rem);
         letter-spacing: 0.06rem;
     }
     h3{
