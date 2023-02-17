@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React , {useEffect} from 'react'
+import React , {useLayoutEffect} from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -88,7 +88,7 @@ const GithubContainer = styled.div`
 const GithubSection = () => {
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     gsap.set("#category-menu-wrapper-inner", { y: "0" , opacity: 1});
     gsap.set("#category-menu-middle-inner", { y: "-30%", opacity: 1});
